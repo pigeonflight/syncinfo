@@ -14,5 +14,20 @@ The included tools are:
 
 Normally I place them in the /usr/local/bin directory
 
+Preparation
+------------
+Make sure you have two nodes which both have passwordless ssh access.
+There's a good article on this here: http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/
+
 Installation
 ---------------
+1. Clone the repository
+
+::
+
+    git clone https://github.com/pigeonflight/syncinfo.git
+    cd syncinfo
+    sh ./install.sh
+
+2. On both nodes edit the `/etc/syncinfo` and add the name (or ip address) of the opposite node
+
