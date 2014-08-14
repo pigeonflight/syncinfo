@@ -7,10 +7,10 @@ In other words, if you don't know what you're doing then you probably want to st
 
 The included tools are:
 
-/usr/local/bin/syncpass
-/usr/local/bin/synchome
-/usr/local/bin/syncprint
-/usr/local/bin/synchttp
+* /usr/local/bin/syncpass
+* /usr/local/bin/synchome
+* /usr/local/bin/syncprint
+* /usr/local/bin/synchttp
 
 Normally I place them in the /usr/local/bin directory
 
