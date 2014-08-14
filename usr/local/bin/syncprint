@@ -1,0 +1,22 @@
+#!/bin/bash
+#=========================================================================
+# Copyright (c) 2004,2014 David Bain (david@alteroo.com)
+# Licensed under the GPL, see GNU.org
+#
+#     used to synchronize the configuration files provided by the 
+#     CUPS printing system.
+#
+#
+#=========================================================================
+#get machine name from /etc/syncinfo file
+machine=`grep ^[A-Za-z] /etc/syncinfo`
+                                                                                           
+#get locate of the rsync command
+RSYNC=`which rsync`
+
+echo "syncing printer config files on $machine"
+sleep 1
+$RSYNC  -e ssh -pogt /etc/print* $machine:/etc/
+$RSYNC -e ssh -pogtr /etc/cups/ $machine:/etc/cups/
+echo "restarting cups on $machine"
+ssh $machine "service cups restart"

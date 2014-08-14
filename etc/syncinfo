@@ -1,0 +1,4 @@
+#the syncinfo system was Created By David Bain david.bain@alteroo.com
+# it is used to keep files across machines in sync.
+#The syncinfo file lists the machines that require synchronization
+swwi-node02

@@ -1,0 +1,19 @@
+#!/bin/bash
+#=========================================================================
+# Copyright (c) 2004,2014 David Bain (david@alteroo.com)
+# Licensed under the GPL, see GNU.org
+#
+#     used to synchronize  /home directory
+#     
+#
+#
+#=========================================================================
+#get machine name from /etc/syncinfo file
+machine=`grep ^[A-Za-z] /etc/syncinfo`
+                                                                                           
+#get locate of the rsync command
+RSYNC=`which rsync`
+
+#$RSYNC  -e ssh -pogtr /home/ $machine:/home/
+echo "synchome is now deprecated, please use 'syncpass' instead"
+
